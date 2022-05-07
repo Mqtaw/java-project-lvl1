@@ -15,5 +15,5 @@ jobs:
           distribution: 'zulu'
       - name: Build wuth Gradle
         uses: gradle/gradle-build-action@v2
-        with:
-          arguments: build
+      - name: Execute Gradle build
+        run: ./gradlew build
