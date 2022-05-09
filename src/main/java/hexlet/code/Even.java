@@ -6,8 +6,10 @@ public class Even {
     public static void even(String name) {
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
         boolean isSuccess = true;
-        for (var i = 0; i < 3; i++) {
-            int question = (int) (Math.random() * 100);
+        final var iterations = 3;
+        for (var i = 0; i < iterations; i++) {
+            final var convertIndex = 100;
+            int question = (int) (Math.random() * convertIndex);
             System.out.println("Question: " + question);
             System.out.print("Your answer: ");
 
@@ -21,15 +23,14 @@ public class Even {
 
             if ((isEven && answer.equals("yes")) || (!isEven && answer.equals("no"))) {
                 System.out.println("Correct!");
-            }
-            else {
+            } else {
                 System.out.println("You made a mistake");
                 isSuccess = false;
                 break;
             }
         }
         if (isSuccess) {
-            System.out.println("Congratulations " + name);
+            System.out.println("Congratulations " + name + "!");
         }
     }
 }

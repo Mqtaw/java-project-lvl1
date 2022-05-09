@@ -8,15 +8,13 @@ public class App {
 
         String name;
         switch (choice) {
-            case 1:
-                name = Greet.greetings();
-                break;
-            case 2:
+            case 1 -> Greet.greetings();
+            case 2 -> {
                 name = Greet.greetings();
                 Even.even(name);
-                break;
-            case 0:
-                break;
+            }
+            default -> {
+            }
         }
     }
 }
