@@ -9,9 +9,9 @@ public class Cli {
         return sc.nextLine();
     }
 
-    public static int getGame() {
+    public static String getGame() {
         Scanner sc = new Scanner(System.in);
         System.out.print("Your choice: ");
-        return sc.nextInt();
+        return sc.nextLine();
     }
 }
