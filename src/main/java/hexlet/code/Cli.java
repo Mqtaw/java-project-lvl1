@@ -8,4 +8,10 @@ public class Cli {
         System.out.print("May I have your name? ");
         return sc.nextLine();
     }
+
+    public static int getGame() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Your choice: ");
+        return sc.nextInt();
+    }
 }
