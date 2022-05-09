@@ -2,10 +2,17 @@ package hexlet.code;
 
 import hexlet.code.games.Calc;
 import hexlet.code.games.Even;
+import hexlet.code.games.GCD;
 
 public class App {
     public static void main(String[] args) {
-        System.out.println("Please enter the game number and press Enter.\n1 - Greet\n2 - Even\n3 - Calc\n0 - Exit");
+        System.out.println("""
+                Please enter the game number and press Enter.
+                1 - Greet
+                2 - Even
+                3 - Calc
+                4 - GCD
+                0 - Exit""");
         var choice = Cli.getGame();
         System.out.println();
 
@@ -19,6 +26,10 @@ public class App {
             case "3" -> {
                 name = Greet.greetings();
                 Engine.playGame(new Calc(), name);
+            }
+            case "4" -> {
+                name = Greet.greetings();
+                Engine.playGame(new GCD(), name);
             }
             default -> {
             }
