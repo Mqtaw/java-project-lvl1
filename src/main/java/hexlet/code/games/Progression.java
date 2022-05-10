@@ -33,6 +33,6 @@ public final class Progression implements Game {
             temp += delta;
         }
 
-        return new String[] {Arrays.toString(progression), answer};
+        return new String[] {String.join(" ", progression), answer};
     }
 }
